@@ -85,11 +85,12 @@ function check() {
     xScale = "";
     yScale = "";
     
+    
+    
 if (str == "Maya"){dataNombre='data/sin_maya.csv'}
 if (str == "Menos_dos"){dataNombre='data/menos_2.csv'}
 if (str == "Tray_2"){dataNombre='data/tray_2.csv'}
 if (str == "Vector"){dataNombre='data/vector.csv'}
-
 
         d3.csv(dataNombre, function(data) {/////SE INGRESA EL CSV DESEADO
         
@@ -115,6 +116,7 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
             var bounds = getBounds(data, 1);
 
             // SVG AND D3 STUFF
+	    d3.select("#chart").select("svg").remove();
             var svg = d3.select("#chart")
                     .append("svg")
                     .attr("width", 1000)
