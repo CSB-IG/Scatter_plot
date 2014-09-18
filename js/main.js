@@ -100,16 +100,16 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
             var xAxisOptions = ["vector1","vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"]  ///opciones menu
              var yAxisOptions = ["vector1","vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"];
             var descriptions = {
-                "vector1": " ",
-		"vector2": " ",
-                "vector3": " ",
-                "vector4": " ",
-                "vector5": " ",
-                "vector6": " ",
-                "vector7": " ",
-                "vector8": " ",
-                "vector9": " ",
-                "vector10": " "
+                "vector1": "Vector 1 ",
+		"vector2": "Vector 2 ",
+                "vector3": "Vector 3 ",
+                "vector4": "Vector 4 ",
+                "vector5": "Vector 5",
+                "vector6": "Vector 6",
+                "vector7": "Vector 7",
+                "vector8": "Vector 8 ",
+                "vector9": "Vector 9 ",
+                "vector10": " Vector 10"
             };
 
             var keys = _.keys(data[11]); /////SELECCION DE KEY (COLUMNA PARA EL MOUSEOVER)
@@ -213,7 +213,7 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
                             return pointColour(4);
                         }
                         else {
-                            return pointColour(5);
+                            return pointColour(8);
                         }
 
                     })
