@@ -96,7 +96,7 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
         
 	  
 
-            var xAxis = '', yAxis = '';  /////COLUMNAS 
+            var xAxis = 'vector2', yAxis = 'vector1';  /////COLUMNAS 
             var xAxisOptions = ["vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"]  ///opciones menu
              var yAxisOptions = ["vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"];
             var descriptions = {

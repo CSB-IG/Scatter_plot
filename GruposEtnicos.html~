@@ -29,6 +29,15 @@
 				<h1>Grupos Étnicos</h1>
 			</div>
 
+
+			<div id="menu">
+				<h2>&uarr; Y axis</h2>
+				<ul id="y-axis-menu"></ul>
+				<h2>&rarr; X axis</h2>
+				<ul id="x-axis-menu"></ul>
+			</div>
+		</div>
+		
 			<div id="about">
 				<!-- <h4>About</h4> -->
 				DESCRIPCION!!!!!!!
@@ -43,15 +52,7 @@
 				
 				
 
-			</div> 
-
-			<div id="menu">
- 				<h2>&uarr; Y axis</h2>
-				<ul id="y-axis-menu"></ul>
-				<h2>&rarr; X axis</h2>
- 				<ul id="x-axis-menu"></ul>
 			</div>
-		</div>
 
 		<script src="js/d3.v3.min.js"></script>
 		<script src="js/underscore-min.js"></script>
