@@ -85,11 +85,9 @@ function check() {
     xScale = "";
     yScale = "";
     
-if (str == "Maya"){dataNombre='data/sin_maya.csv'
-  //d3.select("svg").append("svg").remove();
-  
     
-}
+    
+if (str == "Maya"){dataNombre='data/sin_maya.csv'}
 if (str == "Menos_dos"){dataNombre='data/menos_2.csv'}
 if (str == "Tray_2"){dataNombre='data/tray_2.csv'}
 if (str == "Vector"){dataNombre='data/vector.csv'}
@@ -100,7 +98,7 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
 
             var xAxis = 'vector2', yAxis = 'vector1';  /////COLUMNAS 
             var xAxisOptions = ["vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"]  ///opciones menu
-            // var yAxisOptions = ["Well-being"];
+             var yAxisOptions = ["vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"];
             var descriptions = {
                 "vector2": " ",
                 "vector3": " ",
@@ -149,20 +147,19 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
 
 //EN CASO DE QUERER CAMBIAR 'Y' Y NO TENERLA FIJA 
 
-            // d3.select('#y-axis-menu')
-            //   .selectAll('li')
-            //   .data(yAxisOptions)
-            //   .enter()
-            //   .append('li')
-            //   .text(function(d) {return d;})
-            //   .classed('selected', function(d) {
-            //     return d === yAxis;
-            //   })
-            //   .on('click', function(d) {
-            //     yAxis = d;
-            //     updateChart();
-            //     updateMenus();
-            //   });
+             d3.select('#y-axis-menu')
+               .selectAll('li')
+               .data(yAxisOptions)
+               .enter()
+               .append('li')
+               .text(function(d) {return d;})
+               .classed('selected', function(d) {
+                 return d === yAxis;   })
+               .on('click', function(d) {
+                 yAxis = d;
+                 updateChart();
+                 updateMenus();
+               });
 
             // Country name
             d3.select('svg g.chart')
@@ -230,7 +227,7 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
                     .on('mouseout', function(d) {
                         d3.select('svg g.chart #countryLabel')
                                 .transition()
-                                .duration(1500)
+                                 .duration(1500)
                                 .style('opacity', 0);
                     });
 
@@ -240,14 +237,14 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
             // Render axes
             d3.select('svg g.chart')
                     .append("g")
-                    .attr('transform', 'translate(0, 630)')
+                    .attr('transform', 'translate(-10, 630)')
                     .attr('id', 'xAxis')
                     .call(makeXAxis);
 
             d3.select('svg g.chart')
                     .append("g")
                     .attr('id', 'yAxis')
-                    .attr('transform', 'translate(-10, 0)')
+                    .attr('transform', 'translate(-30, 0)')
                     .call(makeYAxis);
 
 

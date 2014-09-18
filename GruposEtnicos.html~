@@ -42,22 +42,14 @@
 				</select>
 				
 				
-				<select id="combo" name="combo" onchange="d3.selectAll("svg").remove()">
-					<option value="" disabled selected style="display:none;">Opciones</option>
-					<option value="Maya">sin_mayas</option>
-					<option value="Menos_dos">menos_dos</option>
-					<option value="Tray_2">tray_2</option>
-					<option value="Vector">vector</option>
-				</select>
-				
 
-			</div>
+			</div> 
 
 			<div id="menu">
-<!-- 				<h2>&uarr; Y axis</h2>
+ 				<h2>&uarr; Y axis</h2>
 				<ul id="y-axis-menu"></ul>
 				<h2>&rarr; X axis</h2>
- -->				<ul id="x-axis-menu"></ul>
+ 				<ul id="x-axis-menu"></ul>
 			</div>
 		</div>
 
