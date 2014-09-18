@@ -96,11 +96,12 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
         
 	  
 
-            var xAxis = 'vector2', yAxis = 'vector1';  /////COLUMNAS 
-            var xAxisOptions = ["vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"]  ///opciones menu
-             var yAxisOptions = ["vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"];
+            var xAxis = 'vector10', yAxis = 'vector10';  /////COLUMNAS 
+            var xAxisOptions = ["vector1","vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"]  ///opciones menu
+             var yAxisOptions = ["vector1","vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"];
             var descriptions = {
-                "vector2": " ",
+                "vector1": " ",
+		"vector2": " ",
                 "vector3": " ",
                 "vector4": " ",
                 "vector5": " ",
