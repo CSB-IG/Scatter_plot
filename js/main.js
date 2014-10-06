@@ -91,14 +91,16 @@ if (str == "Maya"){dataNombre='data/sin_maya.csv'}
 if (str == "Menos_dos"){dataNombre='data/menos_2.csv'}
 if (str == "Tray_2"){dataNombre='data/tray_2.csv'}
 if (str == "Vector"){dataNombre='data/vector.csv'}
-
+else{dataNombre='data/vector.csv'}
         d3.csv(dataNombre, function(data) {/////SE INGRESA EL CSV DESEADO
+        
+        
         
 	  
 
-            var xAxis = 'vector10', yAxis = 'vector10';  /////COLUMNAS 
+            var xAxis = 'vector10', yAxis = 'vector9';  /////COLUMNAS 
             var xAxisOptions = ["vector1","vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"]  ///opciones menu
-             var yAxisOptions = ["vector1","vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"];
+            var yAxisOptions = ["vector1","vector2", "vector3", "vector4", "vector5", "vector6", "vector7", "vector8", "vector9", "vector10"];
             var descriptions = {
                 "vector1": "Vector 1 ",
 		"vector2": "Vector 2 ",
@@ -109,7 +111,7 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
                 "vector7": "Vector 7",
                 "vector8": "Vector 8 ",
                 "vector9": "Vector 9 ",
-                "vector10": " Vector 10"
+                "vector10": "Vector 10"
             };
 
             var keys = _.keys(data[11]); /////SELECCION DE KEY (COLUMNA PARA EL MOUSEOVER)
@@ -177,8 +179,8 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
             d3.select('svg g.chart')
                     .append('text')
                     .attr('transform', 'translate(-60, 330)rotate(-90)')
-                    .attr({'id': 'yLabel', 'text-anchor': 'middle'})
-                    .text(' '); /////SELECCION DEL TITULO DEL EJE Y
+                    .attr({'id': 'xLabel', 'text-anchor': 'middle'})
+                    .text(descriptions[xAxis]); /////SELECCION DEL TITULO DEL EJE Y
 
             // Render points
             updateScales();
@@ -197,7 +199,7 @@ if (str == "Vector"){dataNombre='data/vector.csv'}
 
                     /////SELECCION DE COLORES PARA LA DISTINCION
                     .attr('fill', function(d) {
-                        if (d.nombre2 == 'Mayas') {
+                        if (d.nombre2 == "Mayas") {
                             return pointColour(0);
                         }
                         else if (d.nombre2 == "Zapotecos") {
